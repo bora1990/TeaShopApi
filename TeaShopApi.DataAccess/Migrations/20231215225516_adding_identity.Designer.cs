@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TeaShopApi.DataAccess.Context;
 
@@ -11,9 +12,10 @@ using TeaShopApi.DataAccess.Context;
 namespace TeaShopApi.DataAccess.Migrations
 {
     [DbContext(typeof(TeaContext))]
-    partial class TeaContextModelSnapshot : ModelSnapshot
+    [Migration("20231215225516_adding_identity")]
+    partial class adding_identity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

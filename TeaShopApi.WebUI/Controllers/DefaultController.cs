@@ -8,5 +8,29 @@ namespace TeaShopApi.WebUI.Controllers
         {
             return View();
         }
+
+        public PartialViewResult PartialHead()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialHeader() 
+        {
+
+            return PartialView();
+        }
+
+        public PartialViewResult PartialFooter()
+        {
+
+            return PartialView();
+        }
+
+        public PartialViewResult PartialScript()
+        {
+
+            return PartialView();
+        }
+
     }
 }
