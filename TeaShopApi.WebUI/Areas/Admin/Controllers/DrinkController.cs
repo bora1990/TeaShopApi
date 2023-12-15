@@ -23,6 +23,9 @@ namespace TeaShopApi.WebUI.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
+            ViewBag.v = "İçecek Yönetimi";
+
+
             var client = _httpClientFactory.CreateClient();
 
             var responseMessage = await client.GetAsync("https://localhost:7026/api/Drinks/");
