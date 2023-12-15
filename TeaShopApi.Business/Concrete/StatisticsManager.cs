@@ -36,5 +36,15 @@ namespace TeaShopApi.Business.Concrete
         {
             return _statisticDal.MaxPriceDrink();
         }
+
+        public decimal TMinPriceDrink()
+        {
+            return _statisticDal.MinPriceDrink();
+        }
+
+        public decimal TTestimonialCount()
+        {
+            return _statisticDal.TestimonialCount();
+        }
     }
 }

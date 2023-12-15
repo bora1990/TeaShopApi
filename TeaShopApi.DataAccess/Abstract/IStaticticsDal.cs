@@ -15,5 +15,9 @@ namespace TeaShopApi.DataAccess.Abstract
         string LastDrinkName();
 
         string MaxPriceDrink();
+
+        decimal MinPriceDrink();
+
+        decimal TestimonialCount();
     }
 }

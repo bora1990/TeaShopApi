@@ -1,8 +1,12 @@
-﻿@model List<TeaShopApi.WebUI.Dtos.DrinkDtos.ResultDrinkDto>
+﻿
+@using TeaShopApi.WebUI.Dtos.DrinkDtos
+
+@model List<ResultDrinkDto>
+
 
 <div class="services_section layout_padding">
     <div class="container">
-        <h1 class="services_taital">İçercek Servisleri</h1>
+        <h1 class="services_taital">İçecek Servisleri</h1>
         <p class="services_text">Uzun yılların tecrübesiyle hizmete devam </p>
         <div class="services_section_2 layout_padding">
             <div class="row">
@@ -20,12 +24,14 @@
                         </div>
                         <div class="right_main">
                             <h6 class="milk_text">@item.drinkName</h6>
-                            <h1 class="price_text">@item.drinkPrice</h1>
+                                <h1 class="price_text">@item.drinkPrice ₺</h1>
                         </div>
                     </div>
                    
                 </div>
+                   
                 }
+           
             </div>
         </div>
         <div class="see_bt"><a href="#">Daha Fazlası</a></div>

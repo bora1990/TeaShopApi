@@ -42,6 +42,7 @@ namespace TeaShopApi.WebUI.Areas.Admin.Controllers
         {
             return View(); 
         }
+
         [HttpPost]
 
         public async Task<IActionResult> CreateDrink(CreateDrinkDto createDrinkDto)

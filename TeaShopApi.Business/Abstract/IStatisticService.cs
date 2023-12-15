@@ -16,5 +16,9 @@ namespace TeaShopApi.Business.Abstract
 
         string TMaxPriceDrink();
 
+        decimal TMinPriceDrink();
+
+        decimal TTestimonialCount();
+
     }
 }

@@ -42,5 +42,16 @@ namespace TeaShopApi.DataAccess.EntityFramework
 
             return value;
         }
+        public decimal MinPriceDrink()
+        {
+            decimal price= _context.Drinks.Min(x=>x.DrinkPrice);
+        
+            return price;
+        }
+
+        public decimal TestimonialCount()
+        {
+            return _context.Testimonials.Count();
+        }
     }
 }
