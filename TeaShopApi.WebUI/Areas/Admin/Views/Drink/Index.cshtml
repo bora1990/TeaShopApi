@@ -1,0 +1,46 @@
+﻿@model List<ResultDrinkDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <!-- [ sample-page ] start -->
+    <div class="col-sm-12">
+        <div class="card">
+
+            <div class="card-header">
+                <h5>
+                    İçecek İşlemleri
+                </h5>
+
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <tr>
+                        <th>#</th>
+                        <th>İçecek Adı</th>
+                        <th>İçecek Fiyatı</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th>@item.drinkID</th>
+                            <th>@item.drinkName</th>
+                            <th>@item.drinkPrice</th>
+                            <td><a href="/Admin/Drink/DeleteDrink/@item.drinkID/" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Admin/Drink/UpdateDrink/@item.drinkID/" class="btn btn-outline-success">Güncelle</a></td>
+                        </tr>
+
+                    }
+                </table>
+                <a href="/Admin/Drink/CreateDrink/" class="btn btn-outline-primary">Yeni İçecek Girişi</a>
+            </div>
+        </div>
+    </div>
+    <!-- [ sample-page ] end -->
+</div>
+

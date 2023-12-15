@@ -1,0 +1,36 @@
+﻿@using TeaShopApi.WebUI.Dtos.MessageDtos
+@model UpdateMessageDto
+@{
+    ViewData["Title"] = "UpdateDrink";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<h1>Mesaj Güncelle</h1>
+
+<form method="post">
+
+    <input type="hidden" asp-for="messageID" />
+    <br />
+
+    <label>Gönderici Adı</label>
+    <input type="text" asp-for="messageSenderName" class="form-control" />
+    <br />
+    <label>Konu</label>
+    <input type="text" asp-for="messageSubject" class="form-control" />
+    <br />
+
+    <label>Mail</label>
+    <input type="text" asp-for="messageEmail" class="form-control" />
+    <br />
+
+    <label>Detay</label>
+    <input type="text" asp-for="messageDetail" class="form-control" />
+    <br />
+
+    <label>Tarih</label>
+    <input type="datetime" asp-for="messageSendDate" class="form-control" />
+    <br />
+
+    <button class="btn btn-primary">Mesaj Güncelle</button>
+
+</form>

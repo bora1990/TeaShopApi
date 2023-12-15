@@ -1,0 +1,60 @@
+﻿@using TeaShopApi.WebUI.Dtos.MessageDtos
+
+
+@model List<ResultMessageDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+    var i = 0;
+}
+
+
+
+<div class="row">
+    <!-- [ sample-page ] start -->
+    <div class="col-sm-12">
+        <div class="card">
+
+            <div class="card-header">
+                <h5>
+                    Mesaj İşlemleri
+                </h5>
+
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <tr>
+                        <th>#</th>
+                        <th>Gönderen Adı</th>
+                        <th>Konusu</th>
+                        <th>Mail Adresi</th>
+                        <th>Mesaj Detay</th>
+                        <th>Mesaj TArihi</th>
+                        <th>Güncelle</th>
+                    </tr>
+               
+                    @foreach (var item in Model)
+                    {
+                        i++;
+                        
+
+                        <tr>
+                            <td>@i</td>
+                            <td>@item.messageSenderName</td>
+                            <td>@item.messageSubject</td>
+                            <td>@item.messageEmail</td>
+                            <td>@item.messageDetail</td>
+                            <td>@item.messageSendDate</td>
+                            <td><a href="/Admin/Message/DeleteMessage/@item.messageID/" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Admin/Message/UpdateMessage/@item.messageID/" class="btn btn-outline-success">Güncelle</a></td>
+                        </tr>
+
+                    }
+                </table>
+                <a href="/Admin/Message/CreateMessage/" class="btn btn-outline-primary">Yeni Mesaj Girişi</a>
+            </div>
+        </div>
+    </div>
+    <!-- [ sample-page ] end -->
+</div>
+
