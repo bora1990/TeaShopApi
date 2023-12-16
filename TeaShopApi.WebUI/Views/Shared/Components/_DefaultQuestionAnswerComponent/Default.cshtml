@@ -2,7 +2,9 @@
 ﻿
 @model List<ResultQuestionDto>
 
-
+@{
+    var i = 0;
+}
 
 <div class="frequently_section layout_padding">
     <div class="container">
@@ -14,18 +16,19 @@
             <div class="bs-example">
                  @foreach (var item in Model)
                     {
-                <div class="accordion" id="accordionExample">
+                    i++;
+                    <div class="accordion" id="accordionExample">
                    
                         <div class="card">
                             <div class="card-header" id="headingOne">
                                 <h2 class="mb-0">
                                     <button type="button" class="btn btn-link w-100" data-toggle="collapse"
-                                            data-target="#collapseOne">
+                                            data-target="#collapseOne_@i">
                                         <i class="fa fa-plus"></i>@item.QuestionDetail
                                     </button>
                                 </h2>
                             </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                            <div id="collapseOne_@i" class="collapse" aria-labelledby="headingOne"
                                  data-parent="#accordionExample">
                                 <div class="card-body">
                                     <p>

@@ -32,6 +32,11 @@
 			font-size: 14px;
 		}
 
+	
+		
+
+
+
 	</style>
 
 	<!--===============================================================================================-->
@@ -39,7 +44,7 @@
 <body>
 
 	<div class="limiter">
-		<div class="container-login100">
+		<div class="container-login100 container">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="~/login-form-v1/Login_v1/images/img-01.png" alt="IMG">
@@ -68,10 +73,17 @@
 						</span>
 					</div>
 
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+					<div class="container-login100-form-btn ">
+						<button type="submit" class="btn login100-form-btn " onclick="openPopUp();">
 							Giriş Yap
 						</button>
+					</div>
+
+					<div class="popup" id="popup">
+						<img src="~/404-tick.png" />
+						<h2>Teşekürler</h2>
+						<p>Giriş Başarılı</p>
+						<button type="button" onclick="closePopUp();">Ok</button>
 					</div>
 
 					<div class="text-center p-t-12">
@@ -93,6 +105,9 @@
 					</div>
 
 
+					
+
+
 				</form>
 			</div>
 		</div>
@@ -111,9 +126,18 @@
 	<!--===============================================================================================-->
 	<script src="~/login-form-v1/Login_v1/vendor/tilt/tilt.jquery.min.js"></script>
 	<script>
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
+
+		let popUp = $("#popup");
+
+		let openPopup=()=>{
+			popUp.addClass("open-popup");
+		}
+
+		let closePopup = () => {
+			popUp.removeClass("open-popup");
+		}
+
+	
 	</script>
 	<!--===============================================================================================-->
 	<script src="~/login-form-v1/Login_v1/js/main.js"></script>

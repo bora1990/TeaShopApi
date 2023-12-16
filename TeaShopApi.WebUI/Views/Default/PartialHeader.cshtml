@@ -1,18 +1,44 @@
-﻿<div class="header_section">
+﻿
+
+
+<div class="header_section">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="logo"><a href="index.html"><img src="~/teab-1.0.0/images/logo.png"></a></div>
+        <div class="logo"><a href="/default/Index/"><img src="~/teab-1.0.0/images/logo.png"></a></div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="index.html">Home</a>
-                <a class="nav-item nav-link" href="about.html">About</a>
-                <a class="nav-item nav-link" href="teashop.html">Teashop</a>
-                <a class="nav-item nav-link" href="pricing.html">Pricing</a>
-                <a class="nav-item nav-link" href="testimonies.html">Testimonies</a>
-                <a class="nav-item nav-link" href="contact.html">Contact</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="nav-item nav-link" href="/Default/Index/">Anasayfa</a>
+                    <a class="nav-item nav-link" href="about.html">Hakkımızda</a>
+
+                    <a class="nav-item nav-link" href="pricing.html">Fiyatlar</a>
+                    <a class="nav-item nav-link" href="testimonies.html">Referanslar</a>
+                    <a class="nav-item nav-link" href="contact.html">İletişim</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a class="nav-item nav-link" href="/admin/dashboard/Index/" style="color:orangered">Yönetim</a>
+                    }
+
+                }
+                else
+                {
+                    <a class="nav-item nav-link" href="index.html">Anasayfa</a>
+                    <a class="nav-item nav-link" href="about.html">Hakkımızda</a>
+
+                    <a class="nav-item nav-link" href="pricing.html">Fiyatlar</a>
+                    <a class="nav-item nav-link" href="testimonies.html">Referanslar</a>
+                    <a class="nav-item nav-link" href="contact.html">İletişim</a>
+                    <a class="nav-item nav-link" href="/register/Index/">Kayıt Ol</a>
+                }
+
+
+               
+
+
             </div>
         </div>
         <div class="login_menu">

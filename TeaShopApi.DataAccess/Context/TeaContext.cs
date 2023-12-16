@@ -20,5 +20,6 @@ namespace TeaShopApi.DataAccess.Context
         public DbSet<Message> Messages { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<About> Abouts { get; set; } 
     }
 }

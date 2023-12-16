@@ -1,4 +1,8 @@
+using TeaShopApi.Business.Abstract;
+using TeaShopApi.Business.Concrete;
+using TeaShopApi.DataAccess.Abstract;
 using TeaShopApi.DataAccess.Context;
+using TeaShopApi.DataAccess.EntityFramework;
 using TeaShopApi.Entity.Concrete;
 using TeaShopApi.WebUI.Models;
 
@@ -9,6 +13,8 @@ builder.Services.AddDbContext<TeaContext>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpClient();
 
+builder.Services.AddScoped<IMessageDal,EfMessageDal>();
+builder.Services.AddScoped<IMessageService, MessageManager>();
 
 builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<TeaContext>().AddErrorDescriber<CustomIdentityValidator>();
 
@@ -35,7 +41,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Default}/{action=Index}/{id?}");
 
 app.UseEndpoints(endpoints =>
 {

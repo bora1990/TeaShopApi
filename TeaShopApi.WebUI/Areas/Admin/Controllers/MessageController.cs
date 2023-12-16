@@ -78,14 +78,14 @@ namespace TeaShopApi.WebUI.Areas.Admin.Controllers
         public async Task<IActionResult> UpdateMessage(int id)
         {
             var client= _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7026/api/Messages"+id);
+            var responseMessage = await client.GetAsync("https://localhost:7026/api/Messages/"+id);
 
             if (responseMessage.IsSuccessStatusCode)
             {
 
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
 
-            var value = System.Text.Json.JsonSerializer.Deserialize<ResultMessageDto>(jsonData);
+            var value = System.Text.Json.JsonSerializer.Deserialize<UpdateMessageDto>(jsonData);
 
             return View(value);
 
