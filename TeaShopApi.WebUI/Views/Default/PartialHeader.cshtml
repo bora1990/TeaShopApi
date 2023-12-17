@@ -13,11 +13,10 @@
                 @if (User.Identity.IsAuthenticated)
                 {
                     <a class="nav-item nav-link" href="/Default/Index/">Anasayfa</a>
-                    <a class="nav-item nav-link" href="about.html">Hakkımızda</a>
-
-                    <a class="nav-item nav-link" href="pricing.html">Fiyatlar</a>
-                    <a class="nav-item nav-link" href="testimonies.html">Referanslar</a>
-                    <a class="nav-item nav-link" href="contact.html">İletişim</a>
+                    <a class="nav-item nav-link" href="/Default/Index/">Hakkımızda</a>
+                    <a class="nav-item nav-link" href="/Default/Index/">Fiyatlar</a>
+                    <a class="nav-item nav-link" href="/Default/Index/">Referanslar</a>
+                    <a class="nav-item nav-link" href="/Default/Index/">İletişim</a>
                     @if (User.IsInRole("Admin"))
                     {
                         <a class="nav-item nav-link" href="/admin/dashboard/Index/" style="color:orangered">Yönetim</a>
@@ -26,13 +25,13 @@
                 }
                 else
                 {
-                    <a class="nav-item nav-link" href="index.html">Anasayfa</a>
-                    <a class="nav-item nav-link" href="about.html">Hakkımızda</a>
+                    <a class="nav-item nav-link" href="/Default/Index/">Anasayfa</a>
+                    <a class="nav-item nav-link" href="/Default/Index/">Hakkımızda</a>
 
-                    <a class="nav-item nav-link" href="pricing.html">Fiyatlar</a>
-                    <a class="nav-item nav-link" href="testimonies.html">Referanslar</a>
-                    <a class="nav-item nav-link" href="contact.html">İletişim</a>
-                    <a class="nav-item nav-link" href="/register/Index/">Kayıt Ol</a>
+                    <a class="nav-item nav-link" href="/Default/Index/">Fiyatlar</a>
+                    <a class="nav-item nav-link" href="/Default/Index/">Referanslar</a>
+                    <a class="nav-item nav-link" href="/Default/Index/">İletişim</a>
+                    <a class="nav-item nav-link" href="/Default/Index//">Kayıt Ol</a>
                 }
 
 

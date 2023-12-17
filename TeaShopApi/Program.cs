@@ -22,9 +22,11 @@ builder.Services.AddScoped<ITestimonialService,TestimonialManager>();
 builder.Services.AddScoped<IMessageDal,EfMessageDal>();
 builder.Services.AddScoped<IMessageService,MessageManager>();
 
-
 builder.Services.AddScoped<IAboutDal, EfAboutDal>();
 builder.Services.AddScoped<IAboutService, AboutManager>();
+
+builder.Services.AddScoped<ISubscribeDal, EfSubscribeDal>();
+builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
 
 builder.Services.AddDbContext<TeaContext>();
 

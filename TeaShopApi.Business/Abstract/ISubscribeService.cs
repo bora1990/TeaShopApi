@@ -7,7 +7,7 @@ using TeaShopApi.Entity.Concrete;
 
 namespace TeaShopApi.Business.Abstract
 {
-    public interface IAboutService :IGenericService<About>
+    public interface ISubscribeService : IGenericService<Subscribe>
     {
     }
 }

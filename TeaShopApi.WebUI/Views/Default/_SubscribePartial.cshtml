@@ -1,0 +1,46 @@
+﻿﻿
+@model TeaShopApi.WebUI.Dtos.SubscribeDtos.CreateSubscribeDto
+
+
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="~/teab-1.0.0/js/bootstrap.min.js"></script>
+
+
+
+<div class="newsletter_section">
+    <div class="newsletter_left">
+        <div class="footer_logo"><img src="~/teab-1.0.0/images/footer-logo.png"></div>
+    </div>
+    <div class="newsletter_right">
+        <h5 class="newsletter_taital">Abone Ol</h5>
+        <div class="subscribe_main">
+
+            <form>
+
+                <input type="text" class="mail_text" placeholder="Mail" asp-for="Mail" style="border:1px solid #222">
+                <button class="btn btn-outline-warning" type="button" onclick="subscribe(); " style="border:1px solid #222">Kaydet</button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    function subscribe() {
+        Swal.fire({
+            title: ' Mail adresiniz sisteme kaydedildi.',
+            icon: 'success',
+            showCancelButton: false,
+            confirmButtonText: 'Tamam'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/Default/Index";
+            }
+        });
+    }
+</script>

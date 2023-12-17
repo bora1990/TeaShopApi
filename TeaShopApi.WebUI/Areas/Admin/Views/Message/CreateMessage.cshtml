@@ -10,26 +10,24 @@
 <form method="post">
 
 
-    <label>İçecek Adı</label>
+    <label>Gönderici Adı</label>
     <input type="text" asp-for="messageSenderName" class="form-control" />
     <br />
 
-    <label>İçecek Fiyatı</label>
+    <label>Mesaj Konusu</label>
     <input type="text" asp-for="messageSubject" class="form-control" />
     <br />
 
-    <label>İçecek Görseli</label>
+    <label>Mail</label>
     <input type="text" asp-for="messageEmail" class="form-control" />
     <br />
 
-    <label>İçecek Görseli</label>
+    <label>Detay</label>
     <input type="text" asp-for="messageDetail" class="form-control" />
     <br />
 
-    <label>İçecek Görseli</label>
-    <input type="datetime" asp-for="messageSendDate" class="form-control" />
-    <br />
+   
 
-    <button class="btn btn-primary">Mesajı Ekle</button>
+    <button class="btn btn-primary" type="submit">Mesajı Ekle</button>
 
 </form>

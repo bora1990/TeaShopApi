@@ -1,0 +1,47 @@
+﻿@using TeaShopApi.WebUI.Dtos.AboutDtos
+@model List<ResultAboutDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <!-- [ sample-page ] start -->
+    <div class="col-sm-12">
+        <div class="card">
+
+            <div class="card-header">
+           
+
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <tr>
+                        <th>#</th>
+                        <th>Başlık</th>
+                        <th>Açıklama</th>
+                        <th>Resim</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.AboutID</td>
+                            <td>@item.Title</td>
+                            <td>@item.Description.Substring(0,20)</td>
+                            <td>@item.ImageUrl</td>
+                            <td><a href="/Admin/About/DeleteAbout/@item.AboutID/" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Admin/About/UpdateAbout/@item.AboutID/" class="btn btn-outline-success">Güncelle</a></td>
+                        </tr>
+
+                    }
+                </table>
+                <a href="/Admin/About/CreateAbout/" class="btn btn-outline-primary">Yeni Açıklama Girişi</a>
+            </div>
+        </div>
+    </div>
+    <!-- [ sample-page ] end -->
+</div>
+

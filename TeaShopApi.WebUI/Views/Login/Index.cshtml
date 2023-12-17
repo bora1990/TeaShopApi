@@ -25,19 +25,14 @@
 	<link rel="stylesheet" type="text/css" href="~/login-form-v1/Login_v1/css/util.css">
 	<link rel="stylesheet" type="text/css" href="~/login-form-v1/Login_v1/css/main.css">
 
-	<style>
+	<script src="~/teab-1.0.0/js/jquery.min.js"></script>
 
-		.hata-mesaji {
-			color: red;
-			font-size: 14px;
-		}
+	<!--===============================================================================================-->
+
 
 	
-		
 
 
-
-	</style>
 
 	<!--===============================================================================================-->
 </head>
@@ -74,17 +69,12 @@
 					</div>
 
 					<div class="container-login100-form-btn ">
-						<button type="submit" class="btn login100-form-btn " onclick="openPopUp();">
+						<button type="submit" class="login100-form-btn"  >
 							Giriş Yap
 						</button>
 					</div>
-
-					<div class="popup" id="popup">
-						<img src="~/404-tick.png" />
-						<h2>Teşekürler</h2>
-						<p>Giriş Başarılı</p>
-						<button type="button" onclick="closePopUp();">Ok</button>
-					</div>
+			
+				
 
 					<div class="text-center p-t-12">
 						<span class="txt1">
@@ -95,8 +85,6 @@
 						</a>
 					</div>
 
-
-
 					<div class="text-center p-t-136">
 						<a class="txt2" href="/Register/Index/">
 							Bir Hesap Oluştur
@@ -105,19 +93,13 @@
 					</div>
 
 
-					
-
-
 				</form>
 			</div>
 		</div>
 	</div>
 
 
-
-
-	<!--===============================================================================================-->
-	<script src="~/login-form-v1/Login_v1/vendor/jquery/jquery-3.2.1.min.js"></script>
+    
 	<!--===============================================================================================-->
 	<script src="~/login-form-v1/Login_v1/vendor/bootstrap/js/popper.js"></script>
 	<script src="~/login-form-v1/Login_v1/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -125,20 +107,7 @@
 	<script src="~/login-form-v1/Login_v1/vendor/select2/select2.min.js"></script>
 	<!--===============================================================================================-->
 	<script src="~/login-form-v1/Login_v1/vendor/tilt/tilt.jquery.min.js"></script>
-	<script>
 
-		let popUp = $("#popup");
-
-		let openPopup=()=>{
-			popUp.addClass("open-popup");
-		}
-
-		let closePopup = () => {
-			popUp.removeClass("open-popup");
-		}
-
-	
-	</script>
 	<!--===============================================================================================-->
 	<script src="~/login-form-v1/Login_v1/js/main.js"></script>
 

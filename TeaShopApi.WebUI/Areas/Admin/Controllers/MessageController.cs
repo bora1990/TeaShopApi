@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using Newtonsoft.Json;
 using System.Text;
 using System.Text.Json;
@@ -46,6 +47,9 @@ namespace TeaShopApi.WebUI.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateMessage(CreateMessageDto createMessageDto)
         {
+           createMessageDto.messageSendDate = DateTime.Now;
+
+
             var client = _httpClientFactory.CreateClient();
             var jsonData=JsonConvert.SerializeObject(createMessageDto);
 

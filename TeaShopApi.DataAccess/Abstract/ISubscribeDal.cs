@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using TeaShopApi.Entity.Concrete;
 
-namespace TeaShopApi.Business.Abstract
+namespace TeaShopApi.DataAccess.Abstract
 {
-    public interface IAboutService :IGenericService<About>
+    public interface ISubscribeDal : IGenericDal<Subscribe>
     {
     }
 }

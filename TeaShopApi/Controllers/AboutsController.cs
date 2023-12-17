@@ -15,9 +15,6 @@ namespace TeaShopApi.Controllers
         {
             _aboutService = aboutService;
         }
-
-
-
         [HttpGet]
         public IActionResult AboutList()
         {
