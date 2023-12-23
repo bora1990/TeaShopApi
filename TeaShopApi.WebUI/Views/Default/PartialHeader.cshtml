@@ -13,24 +13,24 @@
                 @if (User.Identity.IsAuthenticated)
                 {
                     <a class="nav-item nav-link" href="/Default/Index/">Anasayfa</a>
-                    <a class="nav-item nav-link" href="/Default/Index/">Hakkımızda</a>
-                    <a class="nav-item nav-link" href="/Default/Index/">Fiyatlar</a>
-                    <a class="nav-item nav-link" href="/Default/Index/">Referanslar</a>
-                    <a class="nav-item nav-link" href="/Default/Index/">İletişim</a>
+                    <a class="nav-item nav-link" href="#sectionabout">Hakkımızda</a>
+                    <a class="nav-item nav-link" href="#servicessection">Fiyatlar</a>
+                    <a class="nav-item nav-link" href="#testimonialsection">Referanslar</a>
+                    <a class="nav-item nav-link" href="#contactssection">İletişim</a>
                     @if (User.IsInRole("Admin"))
                     {
-                        <a class="nav-item nav-link" href="/register/Index/" style="color:orangered">Yönetim</a>
+                        <a class="nav-item nav-link" href="/admin/dashboard/Index/" style="color:orangered">Yönetim</a>
                     }
 
                 }
                 else
                 {
                     <a class="nav-item nav-link" href="/Default/Index/">Anasayfa</a>
-                    <a class="nav-item nav-link" href="/Default/Index/">Hakkımızda</a>
+                    <a class="nav-item nav-link" href="#sectionabout">Hakkımızda</a>
 
-                    <a class="nav-item nav-link" href="/Default/Index/">Fiyatlar</a>
-                    <a class="nav-item nav-link" href="/Default/Index/">Referanslar</a>
-                    <a class="nav-item nav-link" href="/Default/Index/">İletişim</a>
+                    <a class="nav-item nav-link" href="#servicessection">Fiyatlar</a>
+                    <a class="nav-item nav-link" href="#testimonialsection">Referanslar</a>
+                    <a class="nav-item nav-link" href="#contactssection">İletişim</a>
                     <a class="nav-item nav-link" href="/register/Index/">Kayıt Ol</a>
                 }
 

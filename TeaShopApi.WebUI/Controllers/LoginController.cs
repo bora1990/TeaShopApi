@@ -41,7 +41,7 @@ namespace TeaShopApi.WebUI.Controllers
         {
             await _signInManager.SignOutAsync();
 
-          return  RedirectToAction("Index");
+          return  RedirectToAction("Index","Default");
         }
     }
 }

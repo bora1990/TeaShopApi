@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace TeaShopApi.DtoLayer.MessageDtos
 {
-    public class CreateMessageDto
+    public class ResultMessageDto
     {
-       
+        public int MessageID { get; set; }
         public string messageSenderName { get; set; }
         public string messageSubject { get; set; }
         public string messageEmail { get; set; }

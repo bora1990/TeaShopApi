@@ -30,8 +30,8 @@
                         <tr>
                             <td>@item.AboutID</td>
                             <td>@item.Title</td>
-                            <td>@item.Description.Substring(0,20)</td>
-                            <td>@item.ImageUrl</td>
+                            <td>@item.Description.Substring(0,100)</td>
+                            <td><img src="@item.ImageUrl" width="70px"/> </td>
                             <td><a href="/Admin/About/DeleteAbout/@item.AboutID/" class="btn btn-outline-danger">Sil</a></td>
                             <td><a href="/Admin/About/UpdateAbout/@item.AboutID/" class="btn btn-outline-success">Güncelle</a></td>
                         </tr>

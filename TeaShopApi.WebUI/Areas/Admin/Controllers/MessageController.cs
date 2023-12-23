@@ -53,14 +53,14 @@ namespace TeaShopApi.WebUI.Areas.Admin.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData=JsonConvert.SerializeObject(createMessageDto);
 
-            var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+            var content = new StringContent(jsonData, Encoding.UTF8,"application/json");
 
 
-            var responseMessage =await  client.PostAsync("https://localhost:7026/api/Messages", content);
+            var responseMessage =await client.PostAsync("https://localhost:7026/api/Messages", content);
 
             if(responseMessage.IsSuccessStatusCode)
             {
-                RedirectToAction("Index");
+              return RedirectToAction("Index");
 
             }
 
@@ -74,7 +74,7 @@ namespace TeaShopApi.WebUI.Areas.Admin.Controllers
 
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Message");
             }
             return View();        
         }

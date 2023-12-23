@@ -37,11 +37,11 @@ namespace TeaShopApi.Controllers
         {
             Message message = new Message()
             {
-                MessageSenderName = createMessageDto.MessageSenderName,
-                MessageDetail = createMessageDto.MessageDetail,
-                MessageEmail = createMessageDto.MessageEmail,
-                MessageSendDate = createMessageDto.MessageSendDate,
-                MessageSubject = createMessageDto.MessageSubject,
+                MessageSenderName = createMessageDto.messageSenderName,
+                MessageDetail = createMessageDto.messageDetail,
+                MessageEmail = createMessageDto.messageEmail,
+                MessageSendDate = createMessageDto.messageSendDate,
+                MessageSubject = createMessageDto.messageSubject,
 
 
             };

@@ -3,7 +3,9 @@
 @model List<ResultAboutDto>
 
 
+<section id="sectionabout" class="about_section layout_padding">
 
+  
 
 <div class="about_section layout_padding" id="about">
     <div id="my_main_slider" class="carousel slide" data-ride="carousel">
@@ -22,7 +24,7 @@
                                 <div class="about_main">
                                 <h1 class="about_taital">@item.Title</h1>
                                     <p class="about_text">
-                                    @item.Description.Substring(0,150) ...
+                                    @item.Description...
                                     </p>
                                     <div class="readmore_bt"><a href="#">Devamını Oku</a></div>
                                 </div>
@@ -43,7 +45,7 @@
                                     <div class="about_main">
                                         <h1 class="about_taital">@item.Title</h1>
                                         <p class="about_text">
-                                            @item.Description.Substring(0,80) ...
+                                            @item.Description ...
                                         </p>
                                         <div class="readmore_bt"><a href="#">Devamını Oku</a></div>
                                     </div>
@@ -67,3 +69,5 @@
         </a>
     </div>
 </div>
+
+</section>

@@ -32,6 +32,7 @@ namespace TeaShopApi.Controllers
                 DrinkImageUrl = createDrinkDto.drinkImageUrl,
                 DrinkName = createDrinkDto.drinkName,
                 DrinkPrice = createDrinkDto.drinkPrice
+
             };
 
             _drinkService.TInsert(drink);
